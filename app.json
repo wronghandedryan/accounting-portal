@@ -1,0 +1,24 @@
+{
+	"name": "transaction-offline",
+	"description": "This app does one little thing, and does it well.",
+	"keywords": ["productivity", "js", "indexDb"],
+	"formation": {
+		"web": {
+			"quantity": 1,
+			"size": "standard-1x"
+		}
+	},
+	"image": "heroku/javascript",
+	"addons": [
+		"openredis",
+		{
+			"plan": "mongolab:shared-single-small",
+			"as": "MONGO"
+		}
+	],
+	"buildpacks": [
+		{
+			"url": "https://github.com/stomita/heroku-buildpack-phantomjs"
+		}
+	]
+}
