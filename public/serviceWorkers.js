@@ -1,5 +1,4 @@
 const FILES_TO_CACHE = [
-	'/',
 	'/index.html',
 	'/icons/icon-192x192.png',
 	'/topic.html',
