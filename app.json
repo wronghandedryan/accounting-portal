@@ -1,47 +1,37 @@
 {
-    "name": "transaction-offline",
-    "description": "This app does one little thing, and does it well.",
-    "keywords": [
-        "productivity",
-        "js",
-        "indexDb"
-    ],
-    "formation": {
-        "web": {
-            "quantity": 1,
-            "size": "standard-1x"
-        }
-    },
-    {
-        "env": {
-            "SECRET_TOKEN": {
-                "description": "A secret key for verifying the integrity of signed cookies.",
-                "generator": "secret"
-            },
-            "WEB_CONCURRENCY": {
-                "description": "The number of processes to run."
-            }
-        }
-    },
-    {
+	"name": "transaction-offline",
+	"description": "This app does one little thing, and does it well.",
+	"keywords": ["productivity", "js", "indexDb"],
+	"formation": {
+		"web": {
+			"quantity": 1,
+			"size": "standard-1x"
+		}
+	},
+	"env": {
+		"SECRET_TOKEN": {
+			"description": "A secret key for verifying the integrity of signed cookies.",
+			"generator": "secret"
+		}
+	},
 	"image": "heroku/nodejs",
-    "addons": [
-        "openredis",
-        {
-            "plan": "mongolab:shared-single-small",
-            "as": "MONGO"
-        }
-    ],
-    "buildpacks": [
-        {
-            "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
-        }
-    ],
-    "environments": {
-        "test": {
-            "scripts": {
-                "test": "npm run test"
-            }
-        }
-    }
+	"addons": [
+		"openredis",
+		{
+			"plan": "mongolab:shared-single-small",
+			"as": "MONGO"
+		}
+	],
+	"buildpacks": [
+		{
+			"url": "https://github.com/stomita/heroku-buildpack-phantomjs"
+		}
+	],
+	"environments": {
+		"test": {
+			"scripts": {
+				"test": "npm run test"
+			}
+		}
+	}
 }
